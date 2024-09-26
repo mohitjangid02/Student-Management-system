@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #e0f7fa 0%, #1e88e5 100%);
+      }
+
+      h1 {
+        color: #0277bd; /* Darker Blue for Heading */
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 65px;
+      }
+
+      .form-container {
+        width: 100%;
+        max-width: 500px; /* Adjusted max-width for a more compact form */
+        padding: 20px;
+        border-radius: 19px;
+        background: #ffffff;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      } -->
+
+      <!-- form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      label {
+        margin-bottom: 8px;
+        color: #004d40; /* Dark Teal Color for Labels */
+        font-weight: 500;
+        font-size: 1em;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 2px solid #0288d1; /* Medium Blue Border for Inputs */
+        border-radius: 6px;
+        width: 100%; /* Full width input fields */
+        box-sizing: border-box;
+        font-size: 20px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        border-color: #0277bd;
+        box-shadow: 0 0 8px rgba(0, 119, 204, 0.5);
+        outline: none;
+      }
+
+      input[type="submit"] {
+        padding: 12px;
+        background-color: #0288d1; /* Medium Blue Background for Submit Button */
+        color: white;
+        border: none;
+        border-radius: 19px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        width: 100%; /* Full width button */
+        font-size: 1em;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0277bd; /* Darker Blue on Hover */
+        transform: translateY(-2px); /* Slight lift effect on hover */
+      }
+
+      input[type="submit"]:active {
+        transform: translateY(0); /* Reset on click */
+      }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+      <h1>{{ title }}</h1>
+      <form action="{{ form_action }}" method="POST">
+        <label for="id">Student ID:</label>
+        <input
+          type="text"
+          id="id"
+          name="id"
+          value="{{ student.id if student else '' }}"
+          required
+        />
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="{{ student.name if student else '' }}"
+          required
+        />
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          value="{{ student.age if student else '' }}"
+          required
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+</body>
+</html>

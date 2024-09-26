@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        background: linear-gradient(135deg, #e0f7fa 0%, #1e88e5 100%); /*Light Blue Background */
+      } -->
+
+      <!-- h1 {
+        color: #0d47a1; /* Dark Blue for Heading */
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 100px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .nav-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 20px; /* Space between the links */
+      }
+
+      .nav-list li {
+        display: inline;
+      }
+
+      button {
+        background-color: #1976d2; /* Blue for Buttons */
+        color: #ffffff;
+        border: none;
+        border-radius: 16px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #1565c0; /* Darker Blue on Hover */
+        transform: translateY(2px); /* Slight lift effect on hover */
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table th, table td {
+        padding: 10px;
+        border: 1px solid #bbdefb; /* Light Blue Border */
+      }
+
+      table th {
+        background-color: #1e88e5; /* Primary Blue for Table Headers */
+        color: #ffffff;
+      }
+
+      table td {
+        background-color: #ffffff; /* White Background for Table Cells */
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0d47a1; /* Dark Blue for Links */
+        padding: 2px 5px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #e1f5fe; /* Light Blue Background on Hover */
+        color: #0d47a1; /* Dark Blue Text */
+      }
+    </style>
+</head>
+<body>
+    <h1><b>Welcome to the Student Management System</b></h1>
+    <nav>
+      <ul class="nav-list">
+        <li><button onclick="window.location.href='{{ url_for('get_students') }}'">View Students</button></li>
+        <li><button onclick="window.location.href='{{ url_for('create_student_form') }}'">Add Student</button></li>
+      </ul>
+    </nav>
